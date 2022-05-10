@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+  {{#each rows}}
+  <header id="header" class="d-flex align-items-center"><img src="/images/avclogo.png" alt="" style="width: 4.5rem;
+    margin-left: 1.5rem">
+    <div class="container d-flex justify-content-between" style="margin-left:0px;padding-left:0px">
+
+      <div id="logo">
+        <h1><a href="index.html">AVC<span>College</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/userprofile">Profile</a></li>
+          <li><a class="nav-link scrollto" href="#about">Programs</a></li>
+          <li><a class="nav-link scrollto" href="/semster/{{this.id}}">Result</a></li>
+          <li> <a class="btn btn-outline-danger btn-sm ml-3 pl-2 pr-2 pt-1 pb-1" style="border-radius: 30px;padding:0"
+              href="#contact">LogOut</a> </li>
+        </ul>
+
+        <i class="bi bi-list mobile-nav-toggle"></i>
+
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+  {{/each}}
+  <style>
+    .form-group {
+      margin: 0;
+    }
+
+    .modal-content {
+      background-image: url("https://media.istockphoto.com/vectors/concept-young-man-runs-along-the-directional-arrow-overcoming-on-vector-id1303680911?k=20&m=1303680911&s=612x612&w=0&h=ZBjwUfcs-HQfHp5-iBEATNUqTr1hU6cfhgnA2bZRGkA=");
+      background-repeat: no-repeat;
+      background-position: relative;
+      color: black;
+      background-size: cover;
+    }
+
+    .row {
+      margin: 0;
+    }
+
+    .btn {
+      border-radius: 0;
+    }
+  </style>
+
+
+  <div class="row mt-3" role="group" aria-label="Basic example">
+
+    <button type="button" class="btn btn-sm btn-outline-primary col-1" data-toggle="modal"
+      data-target="#exampleModalCenter">
+      Semster-I
+    </button>
+    <button type="button" class="btn btn-sm btn-outline-primary col-1" data-toggle="modal"
+      data-target="#exampleModalCenter2">
+      Semster-II
+    </button>
+    <button type="button" class="btn btn-sm btn-outline-primary col-2" data-toggle="modal"
+      data-target="#exampleModalCenter3">
+      semster-III
+    </button>
+    <button type="button" class="btn btn-sm btn-outline-primary col-2" data-toggle="modal"
+      data-target="#exampleModalCenter4">
+      Semster-IV
+    </button>
+    <button type="button" class="btn btn-sm btn-outline-primary col-2" data-toggle="modal"
+      data-target="#exampleModalCenter5">
+      semster-V
+    </button>
+    <button type="button" class="btn btn-sm btn-outline-primary col-2" data-toggle="modal"
+      data-target="#exampleModalCenter6">
+      Semster-VI
+    </button>
+    <button type="button" class="btn btn-sm btn-outline-primary col-1" data-toggle="modal"
+      data-target="#exampleModalCenter7">
+      Semster-VII
+    </button>
+    <button type="button" class="btn btn-sm btn-outline-primary col-1" data-toggle="modal"
+      data-target="#exampleModalCenter8">
+      Semster-VIII
+    </button>
+  </div>
+{{#each rows}}
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" style="" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <form action="/semster/{{this.id}}" method="POST">
+            <div class="panel panel-default">
+
+              <div class="panel-body">
+
+                <div id="education_fields" style="display:block ;margin:1rem ">
+
+                  <div class="row mb-2">
+
+                    <div class="col-lg-12 col-sm-6">
+
+                      <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
+                        required>
+                        <option  selected="selected" disabled>ExamType</option>
+                        <option value="cia1" >CIA-I</option>
+                        <option value="cia2">CIA-II</option>
+                        <option value="modal">Modal</option>
+                        <option value="sem1">Semster-I</option>
+                      </select>
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>HS5151-Technical English</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>MA5158-Engineering
+                                Mathematics I</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>PH5151-Engineering Physics</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>CY5151-Engineering Chemistry </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>GE5153 Problem Solving and
+                                Python Programming </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+        </div>
+        <button type="submit" id="submit" class="btn p-2 m-2 btn-primary btn-sm">Submit</button>
+      </div>
+    </div>
+  </div>
+  </form>
+
+  </div>
+  <div class="modal fade" id="exampleModalCenter2" style="" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <form action="/semster/{{this.id}}" method="POST">
+            <div class="panel panel-default">
+
+              <div class="panel-body">
+
+                <div id="education_fields" style="display:block ;margin:1rem ">
+
+                  <div class="row mb-2">
+
+                    <div class="col-lg-12 col-sm-6">
+
+                     <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
+                        required>
+                        <option  selected="selected" disabled>ExamType</option>
+                        <option value="cia1" >CIA-I</option>
+                        <option value="cia2">CIA-II</option>
+                        <option value="modal">Modal</option>
+                        <option value="sem1">Semster-I</option>
+                      </select>
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8 pr-5">
+                        <div class="form-group">
+                          <div class="for"><span><b>HS5251-Professional
+                                Communication</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 ">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark2[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>MA5252-Engineering
+                                Mathematics II </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark2[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5201-Information Technology
+                                Essentials</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark2[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>EE5251-Basics of Electrical and
+                                Electronics Engineering</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark2[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>GE5151-Engineering Graphics </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark2[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button type="submit" id="submit" class="btn p-2 m-2 btn-primary btn-sm">Submit</button>
+      </div>
+    </div>
+  </div>
+  </form>
+  </div>
+  {{!-- semster 3 --}}
+
+  <div class="modal fade" id="exampleModalCenter3" style="" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <form action="/semster/{{this.id}}" method="POST">
+            <div class="panel panel-default">
+
+              <div class="panel-body">
+
+                <div id="education_fields" style="display:block ;margin:1rem ">
+
+                  <div class="row mb-2">
+
+                    <div class="col-lg-12 col-sm-6">
+
+                      <select class="multisteps-form__select form-control mb-2" name="examtype" id="department"
+                        required>
+                        <option value="department" selected="selected" disabled>ExamType</option>
+                        <option>CIA-I</option>
+                        <option>CIA-II</option>
+                        <option>Modal</option>
+                        <option>Semster-III</option>
+                      </select>
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8 pr-5">
+                        <div class="form-group">
+                          <div class="for"><span><b>MA5302-Discrete Mathematics</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 ">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5301-Digital Logic and
+                                Design </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5352 Programming and Data
+                                Structures </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5351-Database Management
+                                Systems</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5302-Software Engineering</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button type="submit" id="submit" class="btn p-2 m-2 btn-primary btn-sm">Submit</button>
+      </div>
+    </div>
+  </div>
+  </form>
+  </div>
+  {{!-- semster 4 --}}
+  <div class="modal fade" id="exampleModalCenter4" style="" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <form action="/semster/{{this.id}}" method="POST">
+            <div class="panel panel-default">
+
+              <div class="panel-body">
+
+                <div id="education_fields" style="display:block ;margin:1rem ">
+
+                  <div class="row mb-2">
+
+                    <div class="col-lg-12 col-sm-6">
+
+                     <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
+                        required>
+                        <option  selected="selected" disabled>ExamType</option>
+                        <option value="cia1" >CIA-I</option>
+                        <option value="cia2">CIA-II</option>
+                        <option value="modal">Modal</option>
+                        <option value="sem1">Semster-I</option>
+                      </select>
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8 pr-5">
+                        <div class="form-group">
+                          <div class="for"><span><b>GE5251-Environmental Sciences</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 ">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5401-Object OrientedProgramming and Advanced Data
+                                Structures </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5402-Design and Analysis of
+                                Algorithms </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5403-Operating Systems</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5451-Computer Architecture</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button type="submit" id="submit" class="btn p-2 m-2 btn-primary btn-sm">Submit</button>
+      </div>
+    </div>
+  </div>
+  </form>
+  </div>
+  {{!-- semster 5 --}}
+  <div class="modal fade" id="exampleModalCenter5" style="" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <form action="/semster/{{this.id}}" method="POST">
+            <div class="panel panel-default">
+
+              <div class="panel-body">
+
+                <div id="education_fields" style="display:block ;margin:1rem ">
+
+                  <div class="row mb-2">
+
+                    <div class="col-lg-12 col-sm-6">
+
+                     <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
+                        required>
+                        <option  selected="selected" disabled>ExamType</option>
+                        <option value="cia1" >CIA-I</option>
+                        <option value="cia2">CIA-II</option>
+                        <option value="modal">Modal</option>
+                        <option value="sem1">Semster-I</option>
+                      </select>
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8 pr-5">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5502-Compiler Engineering</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 ">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5551-Computer Networks</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5501-Web Technologies</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b> <input type="text" class="form-control" id="subject1"
+                                  name="subject[]" value="" placeholder="Elective Subject_1"></b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b><input type="text" class="form-control" id="subject1"
+                                  name="subject[]" value="" placeholder="Elective Subject_2"> </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button type="submit" id="submit" class="btn p-2 m-2 btn-primary btn-sm">Submit</button>
+      </div>
+    </div>
+  </div>
+  </form>
+  </div>
+  {{!-- semster 6 --}}
+  <div class="modal fade" id="exampleModalCenter6" style="" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <form action="/semster/{{this.id}}" method="POST">
+            <div class="panel panel-default">
+
+              <div class="panel-body">
+
+                <div id="education_fields" style="display:block ;margin:1rem ">
+
+                  <div class="row mb-2">
+
+                    <div class="col-lg-12 col-sm-6">
+
+                     <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
+                        required>
+                        <option  selected="selected" disabled>ExamType</option>
+                        <option value="cia1" >CIA-I</option>
+                        <option value="cia2">CIA-II</option>
+                        <option value="modal">Modal</option>
+                        <option value="sem1">Semster-I</option>
+                      </select>
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8 pr-5">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5601-Embedded Systems
+                                and Internet of Things</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 ">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5602-Data Science and
+                                Analytics </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5603-Distributed and Cloud
+                                Computing</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b><input type="text" class="form-control" id="subject1"
+                                  name="subject[]" value="" placeholder="Elective Subject_1"></b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b><input type="text" class="form-control" id="subject1"
+                                  name="subject[]" value="" placeholder="Elective Subject_2"> </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button type="submit" id="submit" class="btn p-2 m-2 btn-primary btn-sm">Submit</button>
+      </div>
+    </div>
+  </div>
+  </form>
+  </div>
+  {{!-- semster 7 --}}
+  <div class="modal fade" id="exampleModalCenter7" style="" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <form action="/semster/{{this.id}}" method="POST">
+            <div class="panel panel-default">
+
+              <div class="panel-body">
+
+                <div id="education_fields" style="display:block ;margin:1rem ">
+
+                  <div class="row mb-2">
+
+                    <div class="col-lg-12 col-sm-6">
+
+                     <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
+                        required>
+                        <option  selected="selected" disabled>ExamType</option>
+                        <option value="cia1" >CIA-I</option>
+                        <option value="cia2">CIA-II</option>
+                        <option value="modal">Modal</option>
+                        <option value="sem1">Semster-I</option>
+                      </select>
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8 pr-5">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5701-Artificial Intelligence</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 ">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IIT5702-Mobile Computing </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>IT5703-Cryptography and
+                                Security</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b><input type="text" class="form-control" id="subject1"
+                                  name="subject[]" value="" placeholder="Elective Subject_1"></b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b><input type="text" class="form-control" id="subject1"
+                                  name="subject[]" value="" placeholder="Elective Subject_2"> </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button type="submit" id="submit" class="btn p-2 m-2 btn-primary btn-sm">Submit</button>
+      </div>
+    </div>
+  </div>
+  </form>
+  </div>
+  {{!-- semster 7 --}}
+  <div class="modal fade" id="exampleModalCenter8" style="" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <form action="/semster/{{this.id}}" method="POST">
+            <div class="panel panel-default">
+
+              <div class="panel-body">
+
+                <div id="education_fields" style="display:block ;margin:1rem ">
+
+                  <div class="row mb-2">
+
+                    <div class="col-lg-12 col-sm-6">
+
+                     <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
+                        required>
+                        <option  selected="selected" disabled>ExamType</option>
+                        <option value="cia1" >CIA-I</option>
+                        <option value="cia2">CIA-II</option>
+                        <option value="modal">Modal</option>
+                        <option value="sem1">Semster-I</option>
+                      </select>
+                    </div>
+                   
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b><input type="text" class="form-control" id="subject1"
+                                  name="subject[]" value="" placeholder="Elective Subject_1"></b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b><input type="text" class="form-control" id="subject1"
+                                  name="subject[]" value="" placeholder="Elective Subject_2"> </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button type="submit" id="submit" class="btn p-2 m-2 btn-primary btn-sm">Submit</button>
+      </div>
+    </div>
+  </div>
+  </form>
+  </div>
+    {{/each}}
+  <!------ Include the above in your HEAD tag ---------->
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script>
+    var room = 0;
+    var arr = ["HS5151-TechnicalEnglish", "MA5158-EngineeringMathematics I", "PH5151-Engineering Physics", "CY5151-Engineering Chemistry", "GE5153-Problem Solving and Python Programming"]
+    function education_fields() {
+
+      for (var i = 0; i < arr.length; i++) {
+        var objTo = document.getElementById('education_fields')
+        var divtest = document.createElement("div");
+        divtest.setAttribute("class", "form-group removeclass" + room);
+        var rdiv = 'removeclass' + room;
+        divtest.innerHTML = '';
+
+        objTo.appendChild(divtest)
+      }
+    }
+    function remove_education_fields(rid) {
+      $('.removeclass' + rid).remove();
+    }
+
+
+      // send add record Ajax call request to YourResponse.php 
+
+
+  </script>
+</body>
+
+</html>

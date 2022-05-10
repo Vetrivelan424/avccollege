@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>AVC College of engineering</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Template Main CSS File -->
+  <link href="/public/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/public/style2.css">
+</head>
+
+<body>
+  <style>
+    .login-container {
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+
+    .login-form-1 {
+      padding: 3%;
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .login-form-1 h3 {
+      text-align: center;
+      color: #333;
+    }
+
+    .login-form-2 {
+      padding: 3%;
+      background: #50d8af;
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .login-form-2 h3 {
+      text-align: center;
+      color: #fff;
+    }
+
+    .login-container form {
+      padding: 10%;
+    }
+
+    .btnSubmit {
+      width: 50%;
+      border-radius: 1rem;
+      padding: 1.5%;
+      border: none;
+      cursor: pointer;
+    }
+
+    .login-form-1 .btnSubmit {
+      font-weight: 600;
+      color: #fff;
+      background-color: #0062cc;
+    }
+
+    .login-form-2 .btnSubmit {
+      font-weight: 600;
+      color: #0062cc;
+      background-color: #fff;
+    }
+
+    .login-form-2 .ForgetPwd {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .login-form-1 .ForgetPwd {
+      color: #0062cc;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  </style>
+  
+  </div>
+  </div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <img src="/public/images/avclogo.png" alt="" style="width: 4.5rem;
+    margin-left: 1.5rem">
+    <div class="container d-flex justify-content-between" style="margin-left:0px;padding-left:0px">
+
+      <div id="logo">
+        <h1><a href="index.html">AVC<span>College</span></a></h1>
+
+
+      </div>
+      <!-- 
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="/adminlogin">Admin Login</a></li>
+          <li class="dropdown"><a href="#"><span>Register</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/studentdetails">Student Register</a></li>
+              <li><a href="#">Admin Register</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Help</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div> -->
+  </header>
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+
+    <div class="hero-content" data-aos="fade-up" style="padding:0px;margin: 0px;">
+      <h2 style="padding:15px;margin: 10px;">Students <span>Counseling</span> Book!</h2>
+      <div class="container login-container" style="padding:0px;margin: 0px;">
+
+        <div class="col-md-4 login-form-1" style=" height:24rem ; position: absolute;">
+          <h3>Admin Login</h3>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Email *" value="" />
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Your Password *" value="" />
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btnSubmit" value="Login" />
+            </div>
+            <div class="form-group">
+              <a href="#" class="ForgetPwd">Forget Password?</a>
+            </div>
+            <div class="form-group">
+              <p class="text-center">Don't have account? <a href="/adminregister" style="color:blue ;" id="signup">Sign up here</a></p>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-4 login-form-2" style="height:24rem ;position:relative; float: right; ">
+          <h3>Student Login</h3>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" name="email" placeholder="Your Email *" value="" />
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" name="password" placeholder="Your Password *" value="" />
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btnSubmit" value="Login" />
+            </div>
+            <div class="form-group">
+
+              <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
+            </div>
+            <div class="form-group">
+              <p class="text-center">Don't have account? <a id="signup" style="color:blue ;" href="/studentdetails">Sign up here</a></p>
+           
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+
+
+
+    <div class="hero-slider swiper">
+
+      <div style="background-image: url('http://www.avccengg.net/images/3opt.jpg')"></div>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 about-img" style="padding-left: 7rem; padding-right:7rem">
+            <img
+              src="https://scontent-maa2-2.xx.fbcdn.net/v/t39.30808-6/238777227_220876520048658_909471965232759807_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=107&ccb=1-5&_nc_sid=e3f864&_nc_ohc=JCBRMrATacoAX9vOf5O&_nc_ht=scontent-maa2-2.xx&oh=00_AT9X2T-Xts1ZKsVpONYPOl68uTId-RCijZy3cdudganSgg&oe=6275314C"
+              width="300rem" style=" border-radius: 10px;" alt="">
+          </div>
+
+          <div class="col-lg-6 content">
+            <h2>The Student Record Is Very Useful One</h2>
+            <h3>The Website using Student And Faculty easier Way Time Consuming is Very Low The data Will be Stored
+              in the Database</h3>
+
+            <ul>
+              <li><i class="bi bi-check-circle"></i>Your Data Is Safly Handle By The server</li>
+              <li><i class="bi bi-check-circle"></i> Any Time You Will Cheak Your Data And Update Your Data </li>
+              <li><i class="bi bi-check-circle"></i>Facalty Will Cheak the Deatails Properly You Score Bord Also
+                show In your Profile </li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+
+    <!-- Vendor JS Files -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <!-- Template Main JS File -->
+    <script src="/public/index.js"></script>
+    <script src="/public/function.js"></script>
+    <script src="/public/validation.js"></script>
+</body>
+
+</html>

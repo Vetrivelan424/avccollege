@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style2.css">
+</head>
+
+<body>
+
+  <header id="header" class="d-flex align-items-center"><img src="../images/avclogo.png" alt="" style="width: 4.5rem;
+    margin-left: 1.5rem">
+    <div class="container d-flex justify-content-between" style="margin-left:0px;padding-left:0px">
+
+      <div id="logo">
+        <h1><a href="index.html">AVC<span>College</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="/adminlogin">Admin Login</a></li>
+          <li class="dropdown"><a href="#"><span>Register</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/studentdetails">Student Register</a></li>
+              <li><a href="#">Admin Register</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Help</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= hero Section ======= -->
+  {{!-- body --}}
+
+  <div class="content">
+
+    <div class="container overflow-hidden">
+      <div class="multisteps-form" style="margin-top:150px; ">
+        <div class="row">
+          <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+            <div class="multisteps-form__progress">
+              <button style="font-size:medium" class="multisteps-form__progress-btn js-active" type="button">step
+                1</button>
+              <button style="font-size:medium" class="multisteps-form__progress-btn" type="button" title="Address">step
+                2</button>
+              <button style="font-size:medium" class="multisteps-form__progress-btn" type="button"
+                title="Order Info">step 3</button>
+              <button style="font-size:medium" class="multisteps-form__progress-btn" type="button" title="Message">step
+                4</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-8 m-auto">
+            {{#each rows}}
+            <form class="multisteps-form__form needs-validation" id="newform" enctype="multipart/form-data"
+              action="/edituser/{{this.id}}" method="post" novalidate>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Enter Your Details</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="name">Name</label>
+                      <input id="name" class="multisteps-form__input form-control" type="text" name="name"
+                        value="{{this.name}}" placeholder="Name" required />
+                      <div class="invalid-feedback">Name can't be</div>
+                    </div>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="col-12 col-sm-6  mt-sm-0">
+                      <label for="validationCustom02">RollNumber</label>
+                      <input id="rollno" class="multisteps-form__input form-control" type="text" name="rollno"
+                        value="{{this.rollno}}" placeholder="Roll.no" required />
+                      <div class="invalid-feedback">Roll Number Can't be Blank</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="">RegisterNumber</label>
+                      <input value="{{this.regno}}" class="multisteps-form__input form-control" id="regno" type="text"
+                        name="regno" placeholder="Register.No" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6  mt-sm-0">
+                      <label for="">Email</label>
+                      <input value="{{this.email}}" class="multisteps-form__input form-control" type="email" id="email"
+                        name="email" placeholder="Email" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="">Student Ph.No</label>
+                      <input class="multisteps-form__input form-control" value="{{this.sm}}" type="text" id="sm"
+                        name="sm" placeholder="Student Ph.No" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6  mt-sm-0">
+                      <label for="">Parents Ph.No</label>
+                      <input class="multisteps-form__input form-control" type="text" id="pm" value="{{this.pm}}"
+                        name="pm" placeholder="Parents Ph.No" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-row ">
+                    <div class="col"><label for="">Adress</label>
+                      <input class="multisteps-form__input form-control" value="{{this.address}}" type="textarea"
+                        id="adress" name="address" placeholder="Address" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="">City</label>
+                      <input class="multisteps-form__input form-control" type="text" value="{{this.city}}" id="city"
+                        name="city" placeholder="City" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-3  mt-sm-0">
+                      <label for="">State</label>
+                      <select class="multisteps-form__select form-control" " name="state" id="state" required>
+                        <option value="state" disable>State...</option>
+                        <option value="{{this.state}}" selected>{{this.state}}</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                      </select>
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-3  mt-sm-0">
+                      <label for="">Pincode</label>
+                      <input class="multisteps-form__input form-control" type="text" id="pincode" name="pincode"
+                        placeholder="Pincode" value="{{this.pincode}}" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button-row d-flex ">
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Enter Your Details</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="">Department</label>
+                      <select class="multisteps-form__select form-control" name="department" id="department" required>
+                        <option value="department" disabled>Department</option>
+                        <option value="{{this.department}}" selected>{{this.department}}</option>
+                        <option>IT</option>
+                        <option>CSE</option>
+                        <option>CIVIL</option>
+                        <option>MECH</option>
+                        <option>ECE</option>
+                        <option>EEE</option>
+                        <option>ICE</option>
+                        <option>MBA</option>
+                        <option>MCA</option>
+
+
+                      </select>
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6  mt-sm-0">
+                      <label for="">DateOfBirth</label>
+                      <input value="{{this.dob}}" class="multisteps-form__input form-control" type="date" id="dob"
+                        name="dob" placeholder="Date Of Birth" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="">FatherName</label>
+                      <input class="multisteps-form__input form-control" id="fathername" type="text" name="fathername"
+                        value="{{this.fathername}}" placeholder="FatherName" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6  mt-sm-0">
+                      <label for="">FatherOccupation</label>
+                      <select value="focc" class="multisteps-form__select form-control" id="focc" name="focc">
+                        <option value="fatheroccupatioon" disabled>--Father Occupation--</option>
+                        <option value="{{this.focc}}" selected>{{this.focc}}</option>
+                        <option value="Business">Business</option>
+                        <option value="farmer">farmer</option>
+                        <option value="Homemaker">Homemaker</option>
+                        <option value="No work">No work</option>
+                      </select>
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="">MotherName</label>
+                      <input value="{{this.mothername}}" class="multisteps-form__input form-control" id="mothername"
+                        type="text" name="mothername" placeholder="Mother Name" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6  mt-sm-0">
+                      <label for="">MotherOccupation</label>
+                      <select class="multisteps-form__select form-control" name="mocc" id="mocc" required>
+                        <option value="motheroccupation" disabled>--Mother Occupation--</option>
+                        <option value="{{this.mocc}}" selected>{{this.mocc}}</option>
+                        <option value="Business">Business</option>
+                        <option value="farmer">farmer</option>
+                        <option value="Homemaker">Homemaker</option>
+                        <option value="No work">No work</option>
+
+
+                      </select>
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="">AccountNumber</label>
+                      <input value="{{this.accno}}" class="multisteps-form__input form-control" type="text" id="accno"
+                        name="accno" placeholder="Account No" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6  mt-sm-0">
+                      <label for="">AdharNumber</label>
+                      <input value="adharno" class="multisteps-form__input form-control" id="adharno" type="text"
+                        name="adharno" placeholder="Adhar No" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="button-row d-flex ">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Enter Your Details</h3>
+                <div class="multisteps-form__content">
+
+                  <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="">SSLC Percentage</label>
+                      <input value="{{this.sslc}}" class="multisteps-form__input form-control" id="sslc" type="text"
+                        name="sslc" placeholder="10th %" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6  mt-sm-0">
+                      <label for="">HSC Percentage</label>
+                      <input value="{{this.hsc}}" class="multisteps-form__input form-control" id="hsc" type="text"
+                        name="hsc" placeholder="12th %" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="">Admission Category</label>
+                      <select class="multisteps-form__select form-control" id="admission" name="admission"
+                        value="{{this.admission}}" required>
+                        <option selected="selected" disabled>Admission category</option>
+                        <option value="{{this.admission}}" selected>{{this.admission}}</option>
+                        <option>Management Quta</option>
+                        <option>Govt Quta</option>
+                      </select>
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6  mt-sm-0">
+                      <label for="">Mode Of Joining</label>
+                      <select class="multisteps-form__select form-control" name="join" id="join" required>
+
+                        <option value="mode" disabled>Mode Of Joining</option>
+                        <option value="{{this.join}}" selected>{{this.join}}</option>
+
+                        <option>Regular</option>
+
+                        <option>Letral</option>
+
+                      </select>
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="">Community</label>
+                      <select class="multisteps-form__select form-control" name="community" id="community" required>
+                        <option value="commuinity" selected="selected" disabled>Community</option>
+                        <option value="{{this.community}}" selected>{{this.community}}</option>
+                        <option value="...">....</option>
+                        {{!-- <option value="ST">ST</option>
+                        <option value="SC">SC</option>
+                        <option value="BC">BC</option>
+                        <option value="MBC">MBC</option>
+                        <option value="OC">OC</option>
+                        <option value="BCM">BCM</option> --}}
+                      </select>
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6  mt-sm-0">
+                      <label for="">BloodGruop</label>
+                      <select class="multisteps-form__select form-control" id="bloodg" name="bloodg"=required>
+                        <option value="bloodg" disabled>Blood Gruop</option>
+                        <option value="{{this.bloodg}}" selected>{{this.bloodg}}</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                      </select>
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+
+                  {{!-- <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="">Password</label>
+                      <input class="multisteps-form__input form-control" type="password" id="password" name="password"
+                        placeholder="Password" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6  mt-sm-0">
+                      <label for="">ConfirmPassword</label>
+                      <input class="multisteps-form__input form-control" type="password" id="confirmpassword"
+                        name="confirmpassword" placeholder="Confirm Password" required />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div> --}}
+
+
+                  <div class="row">
+                    <div class="button-row d-flex  col-12">
+                      <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                      <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Upload Your Details</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row ">
+                    <div class="col-12 col-sm-6">
+                      <label for="">YearOfJoin</label>
+                      <select value="" class="multisteps-form__select form-control" id="year" name="year" required>
+                        <option value="year" disabled>--yearOfJoin--</option>
+                        <option value="{{this.year}}" selected>{{this.year}}</option>
+                        <option>2018-2022</option>
+                        <option>2019-2023</option>
+                        <option>2020-2024</option>
+                        <option>2021-2025</option>
+                        <option>2022-2026</option>
+                        <option>2023-2027</option>
+                        <option>2024-2028</option>
+                        <option>2025-2029</option>
+                        <option>2026-2030</option>
+
+
+                      </select>
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  {{!-- <div class="form-row ">
+                    <div class="col-6"> --}}
+                      {{!-- <label for="">Student Picture</label>
+                      <input type="file" id="imgInp" name="sampleFile" value="{{this.file_src}}" class="form"
+                        accept="image/*" />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div> --}}
+                      <br>
+
+                      {{!-- <div id="bla"> <img id="blah"
+                          src="https://cdn2.iconfinder.com/data/icons/action-states-vol-4-flat/48/Action___States_-_Vol._4-10-512.png"
+                          alt="" style="width: 62px; height: 62px;" /></div>
+
+
+                    {{!-- </div> --}} 
+
+
+                    {{!-- <div class="col-6">
+                      <label for="">Parents Picture</label>
+                      <input accept="image/*" type='file' value="./uploads/{{this.file_src}}" id="imgInp1" class="form"
+                        name="samplefile" />
+                      <div class="invalid-feedback">can't be Blank !</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <br>
+
+                      <div id="blan1"> <img id="blah1"
+                          src="https://cdn2.iconfinder.com/data/icons/action-states-vol-4-flat/48/Action___States_-_Vol._4-10-512.png"
+                          alt="" style="width: 62px; height: 62px;border:1px solid white" /></div>
+
+
+                    </div>
+                  </div>
+                  --}}
+                </div>
+                <div class="button-row d-flex " style="margin-top:10rem">
+
+                  <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                  <button class="btn btn-success ml-auto" id="submitform" type="submit" title="submit">Update </button>
+                </div>
+              </div>
+          </div>
+          {{/each}}
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  {{!-- body end --}}
+  </header>
+  <script src="/editvalitaion.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="/index.js"></script>
+  
+
+</body>
+
+</html>
