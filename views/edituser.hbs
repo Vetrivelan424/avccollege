@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>AVC College of engineering</title><link rel="icon" href="/images/favicon.ico">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,21 +33,18 @@
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
       </div>
+{{#each rows}}
+        <nav id="navbar" class="navbar">
+         <ul>
+          <li><a class="nav-link scrollto active" href="/view/{{this.id}}">Profile</a></li>
+          <li><a class="nav-link scrollto" href="/program/{{this.id}}">Programs</a></li>
+          <li><a class="nav-link scrollto" href="/semster/{{this.id}}">Entry Result</a></li>
+          <li> <a class="btn btn-danger btn-sm ml-3 pl-2 pr-2 pt-1 pb-1" style="color:white; border-radius: 30px;padding:0"
+              href="/">LogOut</a> </li>
+        </ul> 
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="/">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="/adminlogin">Admin Login</a></li>
-          <li class="dropdown"><a href="#"><span>Register</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="/studentdetails">Student Register</a></li>
-              <li><a href="#">Admin Register</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Help</a></li>
-        </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
+
       </nav><!-- .navbar -->
 
     </div>
@@ -76,8 +73,8 @@
         </div>
         <div class="row">
           <div class="col-12 col-lg-8 m-auto">
-            {{#each rows}}
-            <form class="multisteps-form__form needs-validation" id="newform" enctype="multipart/form-data"
+            
+            <form class="multisteps-form__form needs-validation" id="newform" 
               action="/edituser/{{this.id}}" method="post" novalidate>
 
               <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
@@ -567,6 +564,10 @@
 
   {{!-- body end --}}
   </header>
+  <div class="foot text-center w-100 p-4 " style="background-color:#50d8af;height:4rem;" >
+
+<h6 class="copyright" style="color:aliceblue;"><b> © copyright 2022 Avc college of Engineering @ Mayiladuthurai .</b></h6>
+</div>
   <script src="/editvalitaion.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

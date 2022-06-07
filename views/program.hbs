@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style2.css">
+     <link rel="stylesheet" href="/style3.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <header id="header" class="d-flex align-items-center"><img src="/images/avclogo.png" alt="" style="width: 4.5rem;
+    margin-left: 1.5rem">
+    <div class="container d-flex justify-content-between" style="margin-left:0px;padding-left:0px">
+
+      <div id="logo">
+        <h1><a href="index.html">AVC<span>College</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
+      </div>
+{{#each rows}}
+      <nav id="navbar" class="navbar">
+         <ul>
+          <li><a class="nav-link scrollto active" href="/view/{{this.id}}">Profile</a></li>
+          <li><a class="nav-link scrollto" href="/program/{{this.id}}">Programs</a></li>
+          <li><a class="nav-link scrollto" href="/semster/{{this.id}}">Entry Result</a></li>
+          <li> <a class="btn btn-danger btn-sm ml-3 pl-2 pr-2 pt-1 pb-1" style="color:white; border-radius: 30px;padding:0"
+              href="/">LogOut</a> </li>
+        </ul> 
+
+        <i class="bi bi-list mobile-nav-toggle"></i>
+
+      </nav><!-- .navbar -->
+{{/each}}
+    </div>
+  </header>
+  <style>
+    body {
+
+      background-color: #e4e6e9;
+      color: #41464d;
+    }
+
+    .btn:not(:disabled):not(.disabled) {
+      cursor: pointer;
+    }
+
+    .btn-a-brc-tp:not(.disabled):not(:disabled).active,
+    .btn-brc-tp,
+    .btn-brc-tp:focus:not(:hover):not(:active):not(.active):not(.dropdown-toggle),
+    .btn-h-brc-tp:hover,
+    .btn.btn-f-brc-tp:focus,
+    .btn.btn-h-brc-tp:hover {
+      border-color: transparent;
+    }
+
+    .btn-outline-blue {
+      color: #0d6ce1;
+      border-color: #5a9beb;
+      background-color: transparent;
+    }
+
+    .btn {
+      cursor: pointer;
+      position: relative;
+      z-index: auto;
+      border-radius: .175rem;
+      transition: color .15s, background-color .15s, border-color .15s, box-shadow .15s, opacity .15s;
+    }
+
+    .border-2 {
+      border-width: 2px !important;
+      border-style: solid !important;
+      border-color: transparent;
+    }
+
+    .bgc-white {
+      background-color: #fff !important;
+    }
+
+
+    .text-green-d1 {
+      color: #277b5d !important;
+    }
+
+    .letter-spacing {
+      letter-spacing: .5px !important;
+    }
+
+    .font-bolder,
+    .text-600 {
+      font-weight: 600 !important;
+    }
+
+    .text-170 {
+      font-size: 1.7em !important;
+    }
+
+    .text-purple-d1 {
+      color: #6d62b5 !important;
+    }
+
+    .text-primary-d1 {
+      color: #276ab4 !important;
+    }
+
+    .text-secondary-d1 {
+      color: #5f718b !important;
+    }
+
+    .text-180 {
+      font-size: 1.8em !important;
+    }
+
+    .text-150 {
+      font-size: 1.5em !important;
+    }
+
+    .text-danger-m3 {
+      color: #e05858 !important;
+    }
+
+    .rotate-45 {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .position-l {
+      left: 0;
+    }
+
+    .position-b,
+    .position-bc,
+    .position-bl,
+    .position-br,
+    .position-center,
+    .position-l,
+    .position-lc,
+    .position-r,
+    .position-rc,
+    .position-t,
+    .position-tc,
+    .position-tl,
+    .position-tr {
+      position: absolute !important;
+      display: block;
+    }
+
+    .mt-n475,
+    .my-n475 {
+      margin-top: -2.5rem !important;
+    }
+
+    .ml-35,
+    .mx-35 {
+      margin-left: 1.25rem !important;
+    }
+
+    .text-dark-l1 {
+      color: #56585e !important;
+    }
+
+    .text-90 {
+      font-size: .9em !important;
+    }
+
+    .text-left {
+      text-align: left !important;
+    }
+
+    .mt-25,
+    .my-25 {
+      margin-top: .75rem !important;
+    }
+
+    .text-110 {
+      font-size: 1.1em !important;
+    }
+
+    .deleted-text {
+      text-decoration: line-through;
+      ;
+    }
+  </style>
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+  <div class="container">
+    <div class="mt-1 mb-3">
+      <div
+        class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-blue btn-h-outline-blue btn-a-outline-blue w-100 my-2 py-3 shadow-sm">
+        <!-- Basic Plan -->
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4">
+            <h4 class="pt-3 text-170 text-600 text-primary-d1 letter-spacing">
+              In Plant Training
+            </h4>
+
+
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" data-toggle="modal"
+                data-target="#exampleModalCenter3" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600">Entry</a>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-success btn-raised px-4 py-25 w-75 text-600">View</a>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div
+        class="d-style bgc-white btn btn-brc-tp btn-outline-green btn-h-outline-green btn-a-outline-green w-100 my-2 py-3 shadow-sm border-2">
+        <!-- Pro Plan -->
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4">
+            <h4 class="pt-3 text-170 text-600 text-primary-d1 letter-spacing">
+              Industrial Visits
+            </h4>
+
+
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600">Entry</a>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-success btn-raised px-4 py-25 w-75 text-600">View</a>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div
+        class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-purple btn-h-outline-purple btn-a-outline-purple w-100 my-2 py-3 shadow-sm">
+        <!-- Premium Plan -->
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4">
+            <h4 class="pt-3 text-170 text-600 text-purple-d1 letter-spacing">
+              Regular Couenselling
+            </h4>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600">Entry</a>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-success btn-raised px-4 py-25 w-75 text-600">View</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-purple btn-h-outline-purple btn-a-outline-purple w-100 my-2 py-3 shadow-sm">
+        <!-- Premium Plan -->
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4">
+            <h4 class="pt-3 text-170 text-600 text-purple-d1 letter-spacing">
+              Placement Training
+            </h4>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600">Entry</a>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-success btn-raised px-4 py-25 w-75 text-600">View</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-purple btn-h-outline-purple btn-a-outline-purple w-100 my-2 py-3 shadow-sm">
+        <!-- Premium Plan -->
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4">
+            <h4 class="pt-3 text-170 text-600 text-purple-d1 letter-spacing">
+              Placement Details
+            </h4>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600">Entry</a>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-success btn-raised px-4 py-25 w-75 text-600">View</a>
+          </div>
+        </div>
+
+      </div>
+      <div
+        class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-purple btn-h-outline-purple btn-a-outline-purple w-100 my-2 py-3 shadow-sm">
+        <!-- Premium Plan -->
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4">
+            <h4 class="pt-3 text-170 text-600 text-purple-d1 letter-spacing">
+              Extra Curicular Activities
+            </h4>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600">Entry</a>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-success btn-raised px-4 py-25 w-75 text-600">View</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-purple btn-h-outline-purple btn-a-outline-purple w-100 my-2 py-3 shadow-sm">
+        <!-- Premium Plan -->
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4">
+            <h4 class="pt-3 text-170 text-600 text-purple-d1 letter-spacing">
+              Co-Curricular Activities
+            </h4>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600">Entry</a>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-success btn-raised px-4 py-25 w-75 text-600">View</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-purple btn-h-outline-purple btn-a-outline-purple w-100 my-2 py-3 shadow-sm">
+        <!-- Premium Plan -->
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4">
+            <h4 class="pt-3 text-170 text-600 text-purple-d1 letter-spacing">
+              Projects
+            </h4>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600">Entry</a>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-success btn-raised px-4 py-25 w-75 text-600">View</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-purple btn-h-outline-purple btn-a-outline-purple w-100 my-2 py-3 shadow-sm">
+        <!-- Premium Plan -->
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4">
+            <h4 class="pt-3 text-170 text-600 text-purple-d1 letter-spacing">
+              Parents` Meeting
+            </h4>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600">Entry</a>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="f-n-hover btn btn-success btn-raised px-4 py-25 w-75 text-600">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot text-center w-100 p-1 mb-0" style="background-color:#50d8af;height:2rem;">
+    <p class="copyright" style=""> © copyright 2022 Avc college of Engineering @ Mayiladuthurai .
+    <p>
+  </div>
+{{!-- inplant training --}}
+  <div class="modal fade" id="exampleModalCenter3" style="" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <form action="/semster/{{this.id}}" method="POST">
+            <div class="panel panel-default">
+
+              <div class="panel-body">
+
+                <div id="education_fields" style="display:block ;margin:1rem ">
+
+                  <div class="row mb-2">
+
+                    <div class="col-lg-12 col-sm-6">
+                          <input type="hidden" value="sem8" name="semster">
+                     <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
+                        required>
+                        <option  selected="selected" disabled><b></b>chosse your semester</b></option>
+                        <option value="cia1" >semester-I</option>
+                        <option value="cia2">semester-II</option>
+                        <option value="modal">semester-III</option>
+                        <option value="sem1">Semster-IV</option>
+                        <option value="cia1" >semester-V</option>
+                        <option value="cia2">semester-VI</option>
+                        <option value="modal">semester-VII</option>
+                        <option value="sem1">Semster-VIII</option>
+                      </select>
+                    </div>
+                   
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b>Name of the company & place</b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-sm-8  nopadding">
+                        <div class="form-group">
+                          <div class="for"><span><b><input type="text" class="form-control" id="subject1"
+                                  name="sub8[]" value="" placeholder="Elective Subject_2"> </b></span></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 nopadding">
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
+                            value="" placeholder="Mark Or Grade"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button type="submit" id="submit" class="btn p-2 m-2 btn-primary btn-sm">Submit</button>
+      </div>
+    </div>
+  </div>
+  </form>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   <title>AVC College of engineering</title><link rel="icon" href="/images/favicon.ico">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/result.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style2.css">
+     <link rel="stylesheet" href="/style3.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    {{!-- navbar --}}
+     
+  <header id="header" class="d-flex align-items-center"><img src="/images/avclogo.png" alt="" style="width: 4.5rem;
+    margin-left: 1.5rem">
+    <div class="container d-flex justify-content-between" style="margin-left:0px;padding-left:0px">
+
+      <div id="logo">
+        <h1><a href="index.html">AVC<span>College</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+           
+        
+     
+      
+          <li> <a class="btn btn-danger btn-sm ml-3 pl-2 pr-2 pt-1 pb-1" style="color:aliceblue; border-radius: 30px;padding:0"
+              href="/">LogOut</a> </li>
+        </ul>
+
+        <i class="bi bi-list mobile-nav-toggle"></i>
+
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+      <div class="text-center" id="noresult">
+    <img style="height: 34rem;" src="https://img.freepik.com/free-vector/no-data-concept-illustration_114360-616.jpg?t=st=1652598630~exp=1652599230~hmac=56ad08592f2400afb5809c8a337793388c0cb50463ad9a30a934d1f6602f6f9d&w=740" alt="imge not foun">
+     </div>
+<style>
+  h2{
+    color: #0c2e8a;
+  }
+</style>
+    {{!-- navbar end --}}
+     {{#if row}}
+       <section class="pricing-section" style="height: 40rem;">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-xl-5 col-lg-6 col-md-8">
+                    <div class="section-title text-center title-ex1">
+                        <h2 style="color:#50d8af ;"><b>Student Result Portal</b></h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Pricing Table starts -->
+            <div class="row">
+                <div class="col-md-11 ">
+                    <div class="price-card text-center p-4">
+                       
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-offset-1 ">
+                                    <div class="panel">
+                                       
+                                        <div class="panel-body table-responsive mb-4">
+                                         
+                                            <table class="table">
+                                                <thead>
+                                                  
+                                                    <tr>
+                                                        <th>Subject</th>
+                                                        <th width="90px">CIA-1</th>
+                                                        <th width="90px">CIA-2</th>
+                                                        <th>Modal</th>
+                                                        <th>Semester</th>
+                                                        <th>Result</th>
+                                                        <th width="150px">M&Y of Pass</th>
+                                                    </tr>
+                                                </thead>
+                                                 {{#each row}}
+                                                <tbody>
+                                                    <tr >
+                                                        
+                                                       <td class="text-left">{{this.subjectname}}</td>
+                                                        <td>{{this.cia1}}</td>
+                                                        <td>{{this.cia2}}</td>
+                                                        <td>{{this.modal}}</td>
+                                                        <td>{{this.semster}}</td> 
+                                                        <td>
+                                                          </td>
+                                                          
+                                                    </tr>
+                                                   
+                                                </tbody>
+                                                 {{/each}}
+                                            </table>
+                                          <h6 style="color:rgb(60, 60, 113) ;"><b>GCPA of This Semester = ? </b></h6>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                      
+                       
+                    </div>
+                </div>
+                {{!-- <div class="col-md-11 pt-3">
+                    <div class="price-card featured text-center">
+                      
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-offset-1 m-5">
+                                    <div class="panel">
+                                       
+                                        <div class="panel-body table-responsive mb-4">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Subject</th>
+                                                        <th width="90px">CIA-1</th>
+                                                        <th width="90px">CIA-2</th>
+                                                        <th>Modal</th>
+                                                        <th>Semster</th>
+                                                        <th width="150px">M&Y of Pass</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>{{this.subjectname}}</td>
+                                                        <td>{{this.cia1}}</td>
+                                                        <td>{{this.cia2}}</td>
+                                                        <td>{{this.modal}}</td>
+                                                        <td>{{this.sem1}}</td>
+                                                        <td>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+      document.getElementById("noresult").style.display = "none";
+    </script>
+    {{/if}}
+
+<div class="foot text-center w-100 p-1 mb-0" style="background-color:#50d8af;height:2rem;" >
+<p class="copyright" style=""> © copyright 2022 Avc college of Engineering @ Mayiladuthurai .<p>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

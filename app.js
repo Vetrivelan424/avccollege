@@ -51,6 +51,6 @@ app.use("/", require('./routes/router'));
 
 app.use("/auth", require('./routes/auth'))
 
-app.listen(3000, function () {
+app.listen(8080, function () {
     console.log("Hey i am runing in 3000");
 })

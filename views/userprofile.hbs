@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+  <title>AVC College of engineering</title><link rel="icon" href="/images/favicon.ico">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,14 +30,13 @@
       </div>
 
       <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="/userprofile">Profile</a></li>
-          <li><a class="nav-link scrollto" href="#about">Programs</a></li>
-          <li><a class="nav-link scrollto" href="/semster/{{this.id}}">Result</a></li>
-        </ul>
-     
-        <i class="bi bi-list mobile-nav-toggle"></i>
-          <a class="btn btn-outline-danger btn-sm ml-3  pr-4" href="#contact">LogOut</a>  
+       <ul>
+          <li><a class="nav-link scrollto active" href="/view/{{this.id}}">Profile</a></li>
+          <li><a class="nav-link scrollto" href="/program/{{this.id}}">Programs</a></li>
+          <li><a class="nav-link scrollto" href="/semster/{{this.id}}">Entry Result</a></li>
+          <li> <a class="btn btn-danger btn-sm ml-3 pl-2 pr-2 pt-1 pb-1" style="color:white; border-radius: 30px;padding:0"
+              href="/">LogOut</a> </li>
+        </ul> 
       </nav><!-- .navbar -->
       
     </div>
@@ -62,8 +61,8 @@
                           <h4 style="color: #ffffff; margin:0;">{{this.name}}</h4><span style="color: white;">{{this.year}}</span>
                           <p class="text-seconary mb-1" style="color: white;">B.Tech-{{this.department}}</p>
                           <p class="tet-mted font-size-sm" style="color: white;">AVC College Of Engineering</p>
-                          <a  class="btn btn-outline-info" href="/edituser/{{this.id}}" style="padding-left:20px;padding-right:20px;" >Edit</a>
-                          <a class="btn btn-outline-light" href="/">LogOut</a>
+                          <a  class="btn btn-success " href="/edituser/{{this.id}}" style="padding-left:20px;padding-right:20px;" >Edit</a>
+                          
                         </div>
                       </div>
                     </div>
@@ -240,6 +239,7 @@
         </div>
        
         {{/each}}
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

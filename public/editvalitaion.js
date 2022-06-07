@@ -1,5 +1,7 @@
-var x=document.querySelector('#name')       
+var x=document.querySelector('#name')      
+   
 var y=document.querySelector('#email')     
+
 var w=document.querySelector('#regno')     
 var a= document.querySelector('#rollno')    
 var b=document.querySelector('#sm')        
@@ -18,7 +20,8 @@ var n=document.querySelector('#bloodg')
 var o=document.querySelector('#sslc')      
 var p=document.querySelector('#hsc')       
 var q=document.querySelector('#department')
-
+var r=document.querySelector('#imgInp')    
+var s=document.querySelector('#imgInp1') 
 var city= document.querySelector('#city')
 var state= document.querySelector('#state')
 var accno= document.querySelector('#accno')
@@ -29,7 +32,7 @@ community.addEventListener('blur', validatecommunity);
 state.addEventListener('blur', validatestate);
    x.addEventListener('blur', validateUsername);
    y.addEventListener('blur', validateEmail);
-
+  
    mo.addEventListener('blur',validatemo);
    f.addEventListener('blur',validatef);
    g.addEventListener('blur',validateg);
@@ -49,6 +52,7 @@ state.addEventListener('blur', validatestate);
    b.addEventListener('blur',validateb);
    c.addEventListener('blur',validatec);
    d.addEventListener('blur',validated);
+ 
    adharno.addEventListener('blur',validateadharno);
    accno.addEventListener('blur',validateaccno);
 
@@ -437,7 +441,7 @@ else if (z.value!==cpassword.value) {
      'submit',
      function (event) {
 validateEmail();
-
+validatePassword();
 validateaccno();
 validateadharno();
 validatemo();
@@ -481,17 +485,18 @@ validated();
           !validateo()||
           !validatep()||
           !validateq()||
-          !validater()||
-          !validates()||
           !validatew()||
           !validatea()||
           !validateb()||
           !validatec()||
           !validated()
        ) {
+         swal("invalid Input!", "Again Cheack Your Details !", "info");
          event.preventDefault();
          event.stopPropagation();
+        
        } else {
+         swal("Your Profile Create Succesfully!", "Thankyou !", "Success");
          form.classList.add('was-validated');
        }
      },

@@ -2,11 +2,15 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
-
+ <title>AVC College of engineering</title>
+<link rel="icon" href="/images/favicon.ico">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="/entry.css">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style2.css">
+     <link rel="stylesheet" href="/style3.css">
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -27,17 +31,18 @@
       </div>
 
       <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="/userprofile">Profile</a></li>
-          <li><a class="nav-link scrollto" href="#about">Programs</a></li>
-          <li><a class="nav-link scrollto" href="/semster/{{this.id}}">Result</a></li>
-          <li> <a class="btn btn-outline-danger btn-sm ml-3 pl-2 pr-2 pt-1 pb-1" style="border-radius: 30px;padding:0"
-              href="#contact">LogOut</a> </li>
-        </ul>
+         <ul>
+          <li><a class="nav-link scrollto active" href="/view/{{this.id}}">Profile</a></li>
+          <li><a class="nav-link scrollto" href="/program/{{this.id}}">Programs</a></li>
+          <li><a class="nav-link scrollto" href="/semster/{{this.id}}">Entry Result</a></li>
+          <li> <a class="btn btn-danger btn-sm ml-3 pl-2 pr-2 pt-1 pb-1" style="color:white; border-radius: 30px;padding:0"
+              href="/">LogOut</a> </li>
+        </ul> 
 
         <i class="bi bi-list mobile-nav-toggle"></i>
 
       </nav><!-- .navbar -->
+    
 
     </div>
   </header>
@@ -48,59 +53,151 @@
     }
 
     .modal-content {
-      background-image: url("https://media.istockphoto.com/vectors/concept-young-man-runs-along-the-directional-arrow-overcoming-on-vector-id1303680911?k=20&m=1303680911&s=612x612&w=0&h=ZBjwUfcs-HQfHp5-iBEATNUqTr1hU6cfhgnA2bZRGkA=");
+      background-color: #e4e6e9;
       background-repeat: no-repeat;
       background-position: relative;
       color: black;
       background-size: cover;
+    }
+    .btn-info,.btn-success{
+     border-radius: 0;
     }
 
     .row {
       margin: 0;
     }
 
-    .btn {
-      border-radius: 0;
-    }
+ 
   </style>
-
-
-  <div class="row mt-3" role="group" aria-label="Basic example">
-
-    <button type="button" class="btn btn-sm btn-outline-primary col-1" data-toggle="modal"
-      data-target="#exampleModalCenter">
-      Semster-I
-    </button>
-    <button type="button" class="btn btn-sm btn-outline-primary col-1" data-toggle="modal"
-      data-target="#exampleModalCenter2">
-      Semster-II
-    </button>
-    <button type="button" class="btn btn-sm btn-outline-primary col-2" data-toggle="modal"
-      data-target="#exampleModalCenter3">
-      semster-III
-    </button>
-    <button type="button" class="btn btn-sm btn-outline-primary col-2" data-toggle="modal"
-      data-target="#exampleModalCenter4">
-      Semster-IV
-    </button>
-    <button type="button" class="btn btn-sm btn-outline-primary col-2" data-toggle="modal"
-      data-target="#exampleModalCenter5">
-      semster-V
-    </button>
-    <button type="button" class="btn btn-sm btn-outline-primary col-2" data-toggle="modal"
-      data-target="#exampleModalCenter6">
-      Semster-VI
-    </button>
-    <button type="button" class="btn btn-sm btn-outline-primary col-1" data-toggle="modal"
-      data-target="#exampleModalCenter7">
-      Semster-VII
-    </button>
-    <button type="button" class="btn btn-sm btn-outline-primary col-1" data-toggle="modal"
-      data-target="#exampleModalCenter8">
-      Semster-VIII
-    </button>
-  </div>
 {{#each rows}}
+<div style="background-color: #e4e6e9; height:50rem;">
+   <div class="container pt-3">
+    <div class="">
+          <div class="d-style btn align-items-center btn-brc-tp border-2 bgc-white btn-outline-blue btn-h-outline-blue btn-a-outline-blue  my-2 py-3 shadow-sm" style="width:45% ;">
+            <!-- Basic Plan -->
+            <div class="row align-items-center ">
+              <div class="col-12 ">
+                <h4 class=" text-170 text-600  text-primary-d1 letter-spacing">
+                 Semester-I
+                </h4>          
+              </div>
+              <div class="col-12  text-center">
+                <a href="#" class="f-n-hover btn btn-info btn-raised px-4 py-25 text-600" style="width:45% ;" data-toggle="modal"
+                data-target="#exampleModalCenter">Entry</a>
+                 <a href="/result/{{this.id}}" class="f-n-hover btn btn-success btn-raised px-4 py-25  text-600" style="width:45% ;">Result</a>
+              </div>
+            </div>
+          </div>
+          <div style="width:45% ;" class="d-style bgc-white btn btn-brc-tp btn-outline-green btn-h-outline-green btn-a-outline-green my-2 py-3 shadow-sm border-2" >
+            <!-- Pro Plan -->
+            <div class="row align-items-center ">
+              <div class="col-12 ">
+                <h4 class=" text-170 text-600 text-purple-d1 letter-spacing">
+                    Semester-II
+                  </h4>
+              </div>
+              <div class="col-12  text-center">
+                <a href="#" class="f-n-hover btn btn-info btn-raised px-4 py-25  text-600" style="width:45% ;" data-toggle="modal"
+                data-target="#exampleModalCenter2">Entry</a>
+                <a href="/result2/{{this.id}}" class="f-n-hover btn btn-success btn-raised px-4 py-25  text-600" style="width:45% ;">Result</a>
+              </div>
+            </div>
+          </div>
+          <div style="width:45% ;" class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-purple btn-h-outline-purple btn-a-outline-purple my-2 py-3 shadow-sm">
+             <!-- Premium Plan -->
+            <div class="row align-items-center ">
+              <div class="col-12 ">
+                <h4 class=" text-170 text-600 text-purple-d1 letter-spacing">
+                  Semester-III
+                </h4> </div>
+              <div class="col-12  text-center">
+                <a href="#" data-toggle="modal"
+                data-target="#exampleModalCenter3" class="f-n-hover btn btn-info btn-raised px-4 py-25  text-600" style="width:45% ;">Entry</a>
+                  <a href="/result3/{{this.id}}" class="f-n-hover btn btn-success btn-raised px-4 py-25  text-600" style="width:45% ;">Result</a>
+              </div>
+            </div>
+    
+          </div>
+          <div style="width:45% ;" class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-blue btn-h-outline-blue btn-a-outline-blue my-2 py-3 shadow-sm">
+             <!-- Basic Plan -->
+            <div class="row align-items-center ">
+              <div class="col-12 ">
+                <h4 class=" text-170 text-600 text-primary-d1 letter-spacing">
+                 Semester-IV
+                </h4>          
+              </div>
+              <div class="col-12  text-center">
+                <a href="#" data-toggle="modal"
+                data-target="#exampleModalCenter4" class="f-n-hover btn btn-info btn-raised px-4 py-25  text-600" style="width:45% ;">Entry</a>
+                <a href="/result4/{{this.id}}" class="f-n-hover btn btn-success btn-raised px-4 py-25  text-600" style="width:45% ;">Result</a>
+              </div>
+            </div>
+          </div>
+          <div style="width:45% ;" class="d-style bgc-white btn btn-brc-tp btn-outline-green btn-h-outline-green btn-a-outline-green my-2 py-3 shadow-sm border-2" >
+            <!-- Pro Plan -->
+            <div class="row align-items-center ">
+              <div class="col-12 ">
+                <h4 class=" text-170 text-600 text-purple-d1 letter-spacing">
+                    Semester-V
+                  </h4>
+              </div>
+              <div class="col-12  text-center">
+                <a href="#" data-toggle="modal"
+                data-target="#exampleModalCenter5" class="f-n-hover btn btn-info btn-raised px-4 py-25  text-600" style="width:45% ;">Entry</a>
+                <a href="/result5/{{this.id}}" class="f-n-hover btn btn-success btn-raised px-4 py-25  text-600" style="width:45% ;">Result</a>
+              </div>
+            </div>
+          </div>
+          <div style="width:45% ;" class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-purple btn-h-outline-purple btn-a-outline-purple my-2 py-3 shadow-sm">
+             <!-- Premium Plan -->
+            <div class="row align-items-center ">
+              <div class="col-12 ">
+                <h4 class=" text-170 text-600 text-purple-d1 letter-spacing">
+                  Semester-VI
+                </h4> </div>
+              <div class="col-12  text-center">
+                <a href="#" data-toggle="modal"
+                data-target="#exampleModalCenter6" class="f-n-hover btn btn-info btn-raised px-4 py-25  text-600" style="width:45% ;">Entry</a>
+               <a href="/result6/{{this.id}}" class="f-n-hover btn btn-success btn-raised px-4 py-25  text-600" style="width:45% ;">Result</a>
+              </div>
+            </div>
+    
+          </div>
+          <div style="width:45% ;" class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-blue btn-h-outline-blue btn-a-outline-blue my-2 py-3 shadow-sm">
+             <!-- Basic Plan -->
+            <div class="row align-items-center ">
+              <div class="col-12 ">
+                <h4 class=" text-170 text-600 text-primary-d1 letter-spacing">
+                 Semester-VII
+                </h4>          
+              </div>
+              <div class="col-12  text-center">
+                <a href="#" data-toggle="modal"
+                data-target="#exampleModalCenter7" class="f-n-hover btn btn-info btn-raised px-4 py-25  text-600" style="width:45% ;">Entry</a>
+               <a href="/result7/{{this.id}}" class="f-n-hover btn btn-success btn-raised px-4 py-25  text-600" style="width:45% ;">Result</a>
+              </div>
+            </div>
+          </div>
+          <div style="width:45% ;" class="d-style bgc-white btn btn-brc-tp btn-outline-green btn-h-outline-green btn-a-outline-green my-2 py-3 shadow-sm border-2" >
+            <!-- Pro Plan -->
+            <div class="row align-items-center ">
+              <div class="col-12 ">
+                <h4 class=" text-170 text-600 text-purple-d1 letter-spacing">
+                    Semester-VIII
+                  </h4>
+              </div>
+              <div class="col-12  text-center">
+                <a href="#" data-toggle="modal"
+                data-target="#exampleModalCenter8" class="f-n-hover btn btn-info btn-raised px-4 py-25  text-600" style="width:45% ;">Entry</a>
+                <a href="/result8/{{this.id}}" class="f-n-hover btn btn-success btn-raised px-4 py-25  text-600" style="width:45% ;">Result</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+    </div>
+
   <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" style="" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -118,7 +215,7 @@
                   <div class="row mb-2">
 
                     <div class="col-lg-12 col-sm-6">
-
+                      <input type="hidden" value="sem1" name="semster">
                       <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
                         required>
                         <option  selected="selected" disabled>ExamType</option>
@@ -222,14 +319,14 @@
                   <div class="row mb-2">
 
                     <div class="col-lg-12 col-sm-6">
-
+                    <input type="hidden" value="sem2" name="semster">
                      <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
                         required>
                         <option  selected="selected" disabled>ExamType</option>
                         <option value="cia1" >CIA-I</option>
                         <option value="cia2">CIA-II</option>
                         <option value="modal">Modal</option>
-                        <option value="sem1">Semster-I</option>
+                        <option value="sem2">Semster-II</option>
                       </select>
                     </div>
                     <div class="row mb-2">
@@ -240,7 +337,7 @@
                         </div>
                       </div>
                       <div class="col-sm-4 ">
-                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark2[]"
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
                             value="" placeholder="Mark Or Grade"></div>
                       </div>
 
@@ -253,7 +350,7 @@
                         </div>
                       </div>
                       <div class="col-sm-4 nopadding">
-                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark2[]"
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
                             value="" placeholder="Mark Or Grade"></div>
                       </div>
 
@@ -266,7 +363,7 @@
                         </div>
                       </div>
                       <div class="col-sm-4 nopadding">
-                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark2[]"
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
                             value="" placeholder="Mark Or Grade"></div>
                       </div>
 
@@ -279,7 +376,7 @@
                         </div>
                       </div>
                       <div class="col-sm-4 nopadding">
-                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark2[]"
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
                             value="" placeholder="Mark Or Grade"></div>
                       </div>
 
@@ -291,7 +388,7 @@
                         </div>
                       </div>
                       <div class="col-sm-4 nopadding">
-                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark2[]"
+                        <div class="form-group"> <input type="text" class="form-control" id="mark" name="mark[]"
                             value="" placeholder="Mark Or Grade"></div>
                       </div>
 
@@ -326,14 +423,14 @@
                   <div class="row mb-2">
 
                     <div class="col-lg-12 col-sm-6">
-
-                      <select class="multisteps-form__select form-control mb-2" name="examtype" id="department"
+                       <input type="hidden" value="sem3" name="semster">
+                       <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
                         required>
-                        <option value="department" selected="selected" disabled>ExamType</option>
-                        <option>CIA-I</option>
-                        <option>CIA-II</option>
-                        <option>Modal</option>
-                        <option>Semster-III</option>
+                        <option  selected="selected" disabled>ExamType</option>
+                        <option value="cia1" >CIA-I</option>
+                        <option value="cia2">CIA-II</option>
+                        <option value="modal">Modal</option>
+                        <option value="sem3">Semster-III</option>
                       </select>
                     </div>
                     <div class="row mb-2">
@@ -428,7 +525,7 @@
                   <div class="row mb-2">
 
                     <div class="col-lg-12 col-sm-6">
-
+                     <input type="hidden" value="sem4" name="semster">
                      <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
                         required>
                         <option  selected="selected" disabled>ExamType</option>
@@ -529,7 +626,7 @@
                   <div class="row mb-2">
 
                     <div class="col-lg-12 col-sm-6">
-
+                       <input type="hidden" value="sem5" name="semster">
                      <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
                         required>
                         <option  selected="selected" disabled>ExamType</option>
@@ -579,7 +676,7 @@
                       <div class="col-sm-8  nopadding">
                         <div class="form-group">
                           <div class="for"><span><b> <input type="text" class="form-control" id="subject1"
-                                  name="subject[]" value="" placeholder="Elective Subject_1"></b></span></div>
+                                  name="sub5[]" value="" placeholder="Elective Subject_1"></b></span></div>
                         </div>
                       </div>
                       <div class="col-sm-4 nopadding">
@@ -592,7 +689,7 @@
                       <div class="col-sm-8  nopadding">
                         <div class="form-group">
                           <div class="for"><span><b><input type="text" class="form-control" id="subject1"
-                                  name="subject[]" value="" placeholder="Elective Subject_2"> </b></span></div>
+                                  name="sub5[]" value="" placeholder="Elective Subject_2"> </b></span></div>
                         </div>
                       </div>
                       <div class="col-sm-4 nopadding">
@@ -630,7 +727,7 @@
                   <div class="row mb-2">
 
                     <div class="col-lg-12 col-sm-6">
-
+                      <input type="hidden" value="sem6" name="semster">
                      <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
                         required>
                         <option  selected="selected" disabled>ExamType</option>
@@ -683,7 +780,7 @@
                       <div class="col-sm-8  nopadding">
                         <div class="form-group">
                           <div class="for"><span><b><input type="text" class="form-control" id="subject1"
-                                  name="subject[]" value="" placeholder="Elective Subject_1"></b></span></div>
+                                  name="sub6[]" value="" placeholder="Elective Subject_1"></b></span></div>
                         </div>
                       </div>
                       <div class="col-sm-4 nopadding">
@@ -696,7 +793,7 @@
                       <div class="col-sm-8  nopadding">
                         <div class="form-group">
                           <div class="for"><span><b><input type="text" class="form-control" id="subject1"
-                                  name="subject[]" value="" placeholder="Elective Subject_2"> </b></span></div>
+                                  name="sub6[]" value="" placeholder="Elective Subject_2"> </b></span></div>
                         </div>
                       </div>
                       <div class="col-sm-4 nopadding">
@@ -734,7 +831,7 @@
                   <div class="row mb-2">
 
                     <div class="col-lg-12 col-sm-6">
-
+                          <input type="hidden" value="sem7" name="semster">
                      <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
                         required>
                         <option  selected="selected" disabled>ExamType</option>
@@ -785,7 +882,7 @@
                       <div class="col-sm-8  nopadding">
                         <div class="form-group">
                           <div class="for"><span><b><input type="text" class="form-control" id="subject1"
-                                  name="subject[]" value="" placeholder="Elective Subject_1"></b></span></div>
+                                  name="sub7[]" value="" placeholder="Elective Subject_1"></b></span></div>
                         </div>
                       </div>
                       <div class="col-sm-4 nopadding">
@@ -798,7 +895,7 @@
                       <div class="col-sm-8  nopadding">
                         <div class="form-group">
                           <div class="for"><span><b><input type="text" class="form-control" id="subject1"
-                                  name="subject[]" value="" placeholder="Elective Subject_2"> </b></span></div>
+                                  name="sub7[]" value="" placeholder="Elective Subject_2"> </b></span></div>
                         </div>
                       </div>
                       <div class="col-sm-4 nopadding">
@@ -819,7 +916,7 @@
   </div>
   </form>
   </div>
-  {{!-- semster 7 --}}
+  {{!-- semster 8 --}}
   <div class="modal fade" id="exampleModalCenter8" style="" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -836,7 +933,7 @@
                   <div class="row mb-2">
 
                     <div class="col-lg-12 col-sm-6">
-
+                          <input type="hidden" value="sem8" name="semster">
                      <select class="multisteps-form__select form-control mb-2" name="Exam" id="department"
                         required>
                         <option  selected="selected" disabled>ExamType</option>
@@ -851,7 +948,7 @@
                       <div class="col-sm-8  nopadding">
                         <div class="form-group">
                           <div class="for"><span><b><input type="text" class="form-control" id="subject1"
-                                  name="subject[]" value="" placeholder="Elective Subject_1"></b></span></div>
+                                  name="sub8[]" value="" placeholder="Elective Subject_1"></b></span></div>
                         </div>
                       </div>
                       <div class="col-sm-4 nopadding">
@@ -864,7 +961,7 @@
                       <div class="col-sm-8  nopadding">
                         <div class="form-group">
                           <div class="for"><span><b><input type="text" class="form-control" id="subject1"
-                                  name="subject[]" value="" placeholder="Elective Subject_2"> </b></span></div>
+                                  name="sub8[]" value="" placeholder="Elective Subject_2"> </b></span></div>
                         </div>
                       </div>
                       <div class="col-sm-4 nopadding">
@@ -885,7 +982,11 @@
   </div>
     {{/each}}
   <!------ Include the above in your HEAD tag ---------->
+   {{!-- result content --}}
+<div class="foot text-center w-100 p-4 " style="background-color:#50d8af;height:4rem;" >
 
+<h6 class="copyright" style="color:aliceblue;"><b> © copyright 2022 Avc college of Engineering @ Mayiladuthurai .</b></h6>
+</div>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -494,9 +494,12 @@ validated();
            !validatec()||
            !validated()
         ) {
+          swal("invalid Input!", "Again Cheack Your Details !", "info");
           event.preventDefault();
           event.stopPropagation();
+         
         } else {
+          swal("Your Profile Create Succesfully!", "Thankyou !", "Success");
           form.classList.add('was-validated');
         }
       },
